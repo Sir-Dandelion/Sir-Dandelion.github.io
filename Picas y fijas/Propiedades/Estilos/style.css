@@ -4,9 +4,15 @@
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
 }
+
+:root {
+  --first-color: #212121;}
+
+ 
+
 body {
   height: 100%;
-  background: #575ce5;
+  background: var(--first-color);
 }
 .container {
   background-color: #ffffff;
@@ -31,10 +37,10 @@ body {
   line-height: 25px;
 }
 
-.titulo{background-color: #575ce5;
+.titulo{background-color: var(--first-color);
   color: #ffffff;
   border-radius: 5px;
-  border: 5px solid #575ce5;}
+  border: 5px solid  var(--first-color);}
 
  .area{place-items: center}
 .tablero { 
@@ -51,7 +57,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 5px;
-  border: 2px solid #575ce5;
+  border: 2px solid var(--first-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,8 +65,8 @@ body {
   background-color: white;
 }
 
-.espacioF{  background-color: green;}
-.espacioP{  background-color: yellow;}
+.espacioF{  background-color: springgreen;}
+.espacioP{  background-color: rgb(245, 245, 21);}
 
 #separador {
   width: 30px;
@@ -76,7 +82,7 @@ body {
 
 
 textarea {   border-radius: 5px;
-  border: 2px solid #575ce5;
+  border: 2px solid var(--first-color);
   font-size: 15px; width: 150px;
   margin-top: 5%;
 text-align: center;
@@ -91,12 +97,12 @@ text-align: center;
 button {
   width: 100px;
   padding: 10px 0;
-  border: 2.5px solid #424ae0;
+  border: 2.5px solid var(--first-color);
   border-radius: 5px;
   cursor: pointer;
 }
 #flip-button {
-  background-color: #424ae0;
+  background-color: var(--first-color);
   color: #ffffff;
 }
 #flip-button:disabled {
@@ -106,5 +112,5 @@ button {
 }
 #reset-button {
   background-color: #ffffff;
-  color: #424ae0;
+  color:  var(--first-color);
 }
