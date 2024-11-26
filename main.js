@@ -14,7 +14,7 @@ function generarNumeroAAdivinar() {
         let num = Math.floor(Math.random() * 10);  
         if (!numeros.includes(num)) {numeros.push(num);}}
     [A, B, C, D] = numeros;
-    numeroAAdivinar = [A, B, C, D];
+    numeroAAdivinar = [A, B, C, D];}
 
 function verificarIntento(intento) {
     let resultado = [];
