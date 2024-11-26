@@ -4,9 +4,12 @@
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
 }
+
+:root {
+  --first-color: springgreen;}
 body {
   height: 100%;
-  background: #575ce5;
+  background:  var(--first-color);
 }
 .container {
   background-color: #ffffff;
@@ -33,10 +36,10 @@ a{text-decoration: none;color: white;}
   line-height: 25px;
 }
 
-.titulo{background-color: #575ce5;
+.titulo{background-color:  var(--first-color);
   color: #ffffff;
   border-radius: 5px;
-  border: 5px solid #575ce5;}
+  border: 5px solid  var(--first-color);}
 
  .area{place-items: center}
 .tablero { 
@@ -53,7 +56,7 @@ a{text-decoration: none;color: white;}
   width: 30px;
   height: 30px;
   border-radius: 5px;
-  border: 2px solid #575ce5;
+  border: 2px solid  var(--first-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +81,7 @@ a{text-decoration: none;color: white;}
 
 
 textarea {   border-radius: 5px;
-  border: 2px solid #575ce5;
+  border: 2px solid  var(--first-color);
   font-size: 15px; width: 150px;
   margin-top: 5%;
 text-align: center;
@@ -96,13 +99,13 @@ text-align: center;
 button {
   width: 100px;
   padding: 10px;
-  border: 2.5px solid #424ae0;
+  border: 2.5px solid var(--first-color);
   border-radius: 5px;
   cursor: pointer;
   margin: 0px 35px;
 
 }
 #flip-button,#reset-button {
-  background-color: #424ae0;
+  background-color: var(--first-color);
   color: #ffffff;
 }
