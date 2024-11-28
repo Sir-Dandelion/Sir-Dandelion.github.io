@@ -1,14 +1,16 @@
+// Declaración de variables
 let numeroAAdivinar = [];
 let intentos = 0;
-let A, B, C, D; // Declaración explícita de las variables A, B, C, D
+let A, B, C, D;
 
+// Referencias a elementos del DOM
 const contador = document.getElementById('contador');
 const intentoInput = document.getElementById('intento');
 const reiniciarButton = document.querySelector('.botonv1'); // Botón "Reiniciar"
 const intentarButton = document.querySelector('.botonv2'); // Botón "Intentar"
 const tablero = document.querySelector('.tablero1');
 
-// Generar el número a adivinar
+// Función para generar el número a adivinar
 function generarNumeroAAdivinar() {
     const numeros = [];
     while (numeros.length < 4) {
@@ -17,45 +19,46 @@ function generarNumeroAAdivinar() {
             numeros.push(num);
         }
     }
-    [A, B, C, D] = numeros; // Asignación de valores a A, B, C, D
-    numeroAAdivinar = [A, B, C, D]; // Guardamos el número a adivinar
-    console.log("Número a adivinar:", numeroAAdivinar); // Ayuda para depuración
+    [A, B, C, D] = numeros;
+    numeroAAdivinar = [A, B, C, D];
+    console.log("Número a adivinar:", numeroAAdivinar); // Debug
 }
 
-// Verificar el intento del jugador
+// Función para verificar el intento
 function verificarIntento(intento) {
-    let resultado = [];
-    let intentosNumeros = intento.split('').map(Number); // Convertir la entrada en un array de números
+    const resultado = [];
+    const intentosNumeros = intento.split('').map(Number); // Convertir a números
 
-    // Comparar cada número del intento con el número a adivinar
     for (let i = 0; i < 4; i++) {
         if (intentosNumeros[i] === numeroAAdivinar[i]) {
-            resultado.push('true'); // Correcto y en la posición correcta
+            resultado.push('true'); // Correcto y posición correcta
         } else if (numeroAAdivinar.includes(intentosNumeros[i])) {
-            resultado.push('false'); // Correcto pero en la posición incorrecta
+            resultado.push('false'); // Correcto, posición incorrecta
         } else {
-            resultado.push('null'); // No está en el número a adivinar
+            resultado.push('null'); // Incorrecto
         }
     }
 
-    // Actualizar los cuadros en el tablero
+    // Actualizar el tablero
     for (let i = 0; i < 4; i++) {
-        const div = document.getElementById(1 + i + intentos * 4); // Ajustar el ID basado en el intento
-        div.textContent = intentosNumeros[i]; // Mostrar el número ingresado
-        div.dataset.state = resultado[i]; // Actualizar el atributo "data-state"
+        const div = document.getElementById(1 + i + intentos * 4); // ID dinámico
+        if (div) {
+            div.textContent = intentosNumeros[i];
+            div.dataset.state = resultado[i];
 
-        // Cambiar el color de fondo según el estado
-        if (resultado[i] === 'true') {
-            div.style.backgroundColor = 'springgreen';
-        } else if (resultado[i] === 'false') {
-            div.style.backgroundColor = '#F7FF3C';
-        } else {
-            div.style.backgroundColor = '';
+            // Cambiar color según estado
+            if (resultado[i] === 'true') {
+                div.style.backgroundColor = 'springgreen';
+            } else if (resultado[i] === 'false') {
+                div.style.backgroundColor = '#F7FF3C';
+            } else {
+                div.style.backgroundColor = '';
+            }
         }
     }
 }
 
-// Procesar el intento del jugador
+// Procesar el intento
 function intentar() {
     const intento = intentoInput.value;
 
@@ -66,31 +69,34 @@ function intentar() {
     }
 
     intentos++;
-    contador.textContent = intentos; // Actualizar el contador de intentos
+    contador.textContent = intentos; // Actualizar contador
 
-    verificarIntento(intento); // Verificar el intento
-
-    // Limpiar el campo de entrada
-    intentoInput.value = '';
+    verificarIntento(intento); // Verificar intento
+    intentoInput.value = ''; // Limpiar entrada
 }
 
-// Acción al hacer clic en "Intentar"
-intentarButton.addEventListener('click', intentar);
+// Reiniciar el juego sin recargar la página
+function reiniciarJuego() {
+    intentos = 0;
+    contador.textContent = '0';
+    intentoInput.value = '';
+    document.querySelectorAll('.tablero1 div').forEach(div => {
+        div.textContent = '';
+        div.style.backgroundColor = '';
+        delete div.dataset.state;
+    });
+    generarNumeroAAdivinar(); // Nuevo número a adivinar
+}
 
-// Permitir presionar "Enter" para intentar
+// Listeners
+intentarButton.addEventListener('click', intentar);
 intentoInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         intentar();
-        event.preventDefault(); // Evitar el salto de línea
+        event.preventDefault(); // Evitar salto de línea
     }
 });
+reiniciarButton.addEventListener('click', reiniciarJuego);
 
-// Acción al hacer clic en "Reiniciar"
-reiniciarButton.addEventListener('click', () => {
-    location.reload(); // Recargar la página para reiniciar el juego
-});
-
-// Generar el número a adivinar si es el primer intento
-if (contador.textContent === '0') {
-    generarNumeroAAdivinar();
-}
+// Inicializar juego
+generarNumeroAAdivinar();
