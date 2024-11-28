@@ -1,0 +1,212 @@
+/* Reset básico y configuraciones generales */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+:root {
+  --color-uno: springgreen;
+  --color-dos: #212121;
+  --color-tres: #575ce5;
+  --color-cuatro: #F7FF3C;
+  --color-texto: springgreen;
+}
+
+body {
+  height: 100%;
+}
+
+.body1 {
+  background: var(--color-uno);
+}
+
+.body2 {
+  background: var(--color-dos);
+}
+
+.body3 {
+  background: var(--color-tres);
+}
+
+.body4 {
+  background: var(--color-uno);
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  background-color: #ffffff;
+  width: 90%;
+  padding: 5%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  place-items: center;
+}
+
+/* Tipografía y enlaces */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.stats,
+.label,
+textarea {
+  text-align: right;
+  color: #101020;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+/* Títulos */
+.titulo1 {
+  background-color: var(--color-uno);
+  color: #ffffff;
+  border-radius: 5px;
+  border: 5px solid var(--color-uno);
+}
+
+.titulo2 {
+  background-color: var(--color-dos);
+  color: #ffffff;
+  border-radius: 5px;
+  border: 5px solid var(--color-dos);
+}
+
+.titulo3 {
+  background-color: var(--color-tres);
+  color: #ffffff;
+  border-radius: 5px;
+  border: 5px solid var(--color-tres);
+}
+
+/* Área de elementos centrados */
+.area {
+  place-items: center;
+}
+
+/* Estilos para el tablero */
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(7, 30px);
+  /* 7 columnas */
+  grid-template-rows: repeat(6, 30px);
+  /* 6 filas */
+  gap: 5px;
+  padding: 5px;
+  top: 50%;
+  left: 50%;
+}
+
+.tablero1 {
+  display: grid;
+  grid-template-columns: repeat(4, 30px);
+  /* 4 columnas */
+  grid-template-rows: repeat(6, 30px);
+  /* 6 filas */
+  gap: 5px;
+  padding: 5px;
+  top: 50%;
+  left: 50%;
+}
+
+/* Estilos de las casillas del tablero */
+.espacio,
+.espacioP,
+.espacioF {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid var(--color-uno);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: white;
+}
+
+.espacioF {
+  background-color: var(--color-uno);
+  border: 2px solid var(--color-dos);
+}
+
+.espacioP {
+  background-color: var(--color-cuatro);
+  border: 2px solid var(--color-dos);
+}
+
+.uno {
+  border: 2px solid var(--color-tres);
+}
+
+.dos {
+  border: 2px solid var(--color-dos);
+}
+
+#separador {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: white;
+}
+
+/* Estilos para los textos */
+textarea {
+  border-radius: 5px;
+  border: 2px solid var(--color-uno);
+  font-size: 15px;
+  width: 150px;
+  margin-top: 5%;
+  text-align: center;
+}
+
+/* Botones */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  border: 10px;
+}
+
+button {
+  width: 100px;
+  padding: 10px;
+  border: 2.5px solid var(--color-uno);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0px 35px;
+}
+
+.botonv1 {
+  background-color: var(--color-uno);
+  color: #ffffff;
+}
+
+.botonv2 {
+  background-color: #ffffff;
+  color: #424ae0;
+}
+
+.accion {
+  background-color: var(--color-tres);
+  color: #ffffff;
+}
+
+.accion2 {
+  background-color: var(--color-dos);
+  color: #ffffff;
+}
+
+.segundo{color: var(--color-dos);}
