@@ -21,9 +21,22 @@
       <button class="botonv1"><a href="facil.html">Facil</a></button>
       <button class="botonv1"><a href="clasico.html">Dificil</a></button>
     </div>
+    <button class="botonv3" onclick="openModal()">¿Cómo jugar?</button>
+
+    <div id="modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Instrucciones</h2>
+        <p>Picas y fijas consiste en adivinar un número de 4 dígitos, cuyas cifras sin del 0 al 9, no se repiten.
+
+          Cada turno el jugador escoge cuál será la serie de números que le gustaría intentar 
+          </p>
+        
+      </div>
+    </div>
 
   </div>
-
+  <script src="Funciones/modo facil.js"></script>
 </body>
 
 </html>
