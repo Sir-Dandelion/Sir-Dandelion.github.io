@@ -86,3 +86,14 @@ intentoInput.addEventListener('keydown', (event) => {
 
 // Generar el número al inicio
 generarNumeroAAdivinar();
+
+
+
+//Toogle
+function openModal() {
+    document.getElementById("modal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
