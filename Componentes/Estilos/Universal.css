@@ -1,59 +1,63 @@
-/* Reset básico y configuraciones generales */
+/* RESET Y CONFIGURACIONES GENERALES */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif; /* Fuente principal */
 }
 
 :root {
-  --color-uno: springgreen;
-  --color-dos: #212121;
-  --color-tres: #575ce5;
-  --color-cuatro: #F7FF3C;
-  --color-texto: springgreen;
+  /* Colores principales del diseño */
+  --color-uno: springgreen;   /* Color de fondo principal */
+  --color-dos: #212121;       /* Color de fondo oscuro */
+  --color-tres: #575ce5;      /* Color de fondo adicional */
+  --color-cuatro: #F7FF3C;    /* Color de fondo amarillo */
+  --color-texto: springgreen; /* Color del texto */
+
+  /* Tamaños y tipografía */
+  --font-size: 16px;
 }
 
+/* CUERPO Y FONDOS */
 body {
   height: 100%;
 }
 
 .body1 {
-  background: var(--color-uno);
+  background: var(--color-uno); /* Fondo verde */
 }
 
 .body2 {
-  background: var(--color-dos);
+  background: var(--color-dos); /* Fondo oscuro */
 }
 
 .body3 {
-  background: var(--color-tres);
+  background: var(--color-tres); /* Fondo azul */
 }
 
 .body4 {
-  background: var(--color-cuatro);
+  background: var(--color-cuatro); /* Fondo amarillo */
 }
 
-/* Estilos para el contenedor principal */
+/* CONTENEDOR PRINCIPAL */
 .container {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Fondo blanco */
   width: 90%;
   padding: 5%;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
   border-radius: 10px;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-  place-items: center;
+  perspective: 300px; /* Perspectiva 3D */
+  place-items: center; /* Centrado del contenido */
 }
 
-/* Tipografía y enlaces */
+/* TIPOGRAFÍA Y ENLACES */
 a {
   text-decoration: none;
-  color: white;
+  color: white; /* Color de texto de los enlaces */
 }
 
 .stats,
@@ -65,40 +69,39 @@ textarea {
   line-height: 25px;
 }
 
-/* Títulos */
-.titulo1 {
-  background-color: var(--color-uno);
+/* TÍTULOS */
+.titulo1, .titulo2, .titulo3 {
   color: #ffffff;
   border-radius: 5px;
-  border: 5px solid var(--color-uno);
+  border: 5px solid;
+  padding: 10px;
+}
+
+.titulo1 {
+  background-color: var(--color-uno); /* Fondo verde */
+  border-color: var(--color-uno); /* Borde verde */
 }
 
 .titulo2 {
-  background-color: var(--color-dos);
-  color: #ffffff;
-  border-radius: 5px;
-  border: 5px solid var(--color-dos);
+  background-color: var(--color-dos); /* Fondo oscuro */
+  border-color: var(--color-dos); /* Borde oscuro */
 }
 
 .titulo3 {
-  background-color: var(--color-tres);
-  color: #ffffff;
-  border-radius: 5px;
-  border: 5px solid var(--color-tres);
+  background-color: var(--color-tres); /* Fondo azul */
+  border-color: var(--color-tres); /* Borde azul */
 }
 
-/* Área de elementos centrados */
+/* ÁREA DE ELEMENTOS CENTRADOS */
 .area {
-  place-items: center;
+  place-items: center; /* Centrado del contenido dentro de un contenedor */
 }
 
-/* Estilos para el tablero */
+/* ESTILOS PARA EL TABLERO (Juego) */
 .tablero {
   display: grid;
-  grid-template-columns: repeat(7, 30px);
-  /* 7 columnas */
-  grid-template-rows: repeat(6, 30px);
-  /* 6 filas */
+  grid-template-columns: repeat(7, 30px); /* 7 columnas */
+  grid-template-rows: repeat(6, 30px); /* 6 filas */
   gap: 5px;
   padding: 5px;
   top: 50%;
@@ -107,20 +110,16 @@ textarea {
 
 .tablero1 {
   display: grid;
-  grid-template-columns: repeat(4, 30px);
-  /* 4 columnas */
-  grid-template-rows: repeat(6, 30px);
-  /* 6 filas */
+  grid-template-columns: repeat(4, 30px); /* 4 columnas */
+  grid-template-rows: repeat(6, 30px); /* 6 filas */
   gap: 5px;
   padding: 5px;
   top: 50%;
   left: 50%;
 }
 
-/* Estilos de las casillas del tablero */
-.espacio,
-.espacioP,
-.espacioF {
+/* ESTILOS DE LAS CASILLAS DEL TABLERO */
+.espacio, .espacioP, .espacioF {
   width: 30px;
   height: 30px;
   border-radius: 5px;
@@ -132,22 +131,24 @@ textarea {
   background-color: white;
 }
 
+/* Casillas de los intentos */
 .espacioF {
-  background-color: var(--color-uno);
-  border: 2px solid var(--color-dos);
+  background-color: var(--color-uno); /* Fondo verde */
+  border: 2px solid var(--color-dos); /* Borde oscuro */
 }
 
 .espacioP {
-  background-color: var(--color-cuatro);
-  border: 2px solid var(--color-dos);
+  background-color: var(--color-cuatro); /* Fondo amarillo */
+  border: 2px solid var(--color-dos); /* Borde oscuro */
 }
 
+/* Variaciones de estilo para cada tipo de espacio */
 .uno {
-  border: 2px solid var(--color-tres);
+  border: 2px solid var(--color-tres); /* Borde azul */
 }
 
 .dos {
-  border: 2px solid var(--color-dos);
+  border: 2px solid var(--color-dos); /* Borde oscuro */
 }
 
 #separador {
@@ -162,7 +163,7 @@ textarea {
   background-color: white;
 }
 
-/* Estilos para los textos */
+/* ESTILOS PARA LOS TEXTOS */
 textarea {
   border-radius: 5px;
   border: 2px solid var(--color-uno);
@@ -172,12 +173,11 @@ textarea {
   text-align: center;
 }
 
-/* Botones */
+/* BOTONES */
 .buttons {
   display: flex;
   justify-content: space-between;
   padding: 2%;
-  border: 10px;
 }
 
 button {
@@ -189,47 +189,51 @@ button {
   margin: 0px 35px;
 }
 
+/* Estilo de botones principales */
 .botonv1 {
-  background-color: var(--color-uno);
-  color: #ffffff;
+  background-color: var(--color-uno); /* Fondo verde */
+  color: #ffffff; /* Texto blanco */
 }
 
 .botonv2 {
-  background-color: #ffffff;
-  color: #424ae0;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #424ae0; /* Texto azul */
 }
 
 .botonv3 {
   width: 240px;
 }
 
-
+/* Estilos para botones con acción */
 .accion {
-  background-color: var(--color-tres);
+  background-color: var(--color-tres); /* Fondo azul */
   color: #ffffff;
 }
 
 .accion2 {
-  background-color: var(--color-dos);
+  background-color: var(--color-dos); /* Fondo oscuro */
   color: #ffffff;
 }
 
-.segundo{color: var(--color-dos);}
+/* Botón con texto secundario */
+.segundo {
+  color: var(--color-dos); /* Texto oscuro */
+}
 
- /* Estilos para el modal */
- .modal {
+/* ESTILOS PARA EL MODAL (Ventana emergente) */
+.modal {
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
   border-radius: 10px;
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #fefefe; /* Fondo blanco */
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -237,6 +241,7 @@ button {
   width: 80%;
 }
 
+/* Estilo del botón de cierre */
 .close {
   color: #aaa;
   float: right;
@@ -251,10 +256,37 @@ button {
   cursor: pointer;
 }
 
+/* Estilos para la imagen (luna) */
 img {
   width: 20px;
   height: 20px;
-  position: fixed;  /* Fija la imagen en la pantalla */
-  right: 50px;    
+  position: fixed;
+  right: 50px;
   top: 50px;
+}
+
+/* MODO OSCURO */
+.lunita {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  transition: 0.3s;
+}
+
+.lunita:hover {
+  color: var(--first-color);
+}
+
+i:hover, .lunita:hover {
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: #252525; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  --title-color: hsl(17, 12%, 95%);
+  --text-color: hsl(17, 12%, 75%);
+  --container-color: hsl(17, 24%, 12%);
 }
