@@ -64,7 +64,7 @@ function intentar() {
 
     // Validar entrada
     if (intento.length !== 4 || isNaN(intento)) {
-        alert('Por favor, ingresa 4 dígitos únicos.');
+        alert('Por favor, ingresa 4 dígitos.');
         return;
     }
 

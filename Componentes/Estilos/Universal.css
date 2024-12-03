@@ -67,6 +67,7 @@ textarea {
   color: #101020;
   font-weight: 500;
   line-height: 25px;
+  resize: none;
 }
 
 /* TÍTULOS */
@@ -263,6 +264,16 @@ img {
   position: fixed;
   right: 50px;
   top: 50px;
+}
+.ri-arrow-go-back-line {  
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  left: 50px; /* Ajusta la distancia desde la izquierda */
+  top: 50px; /* Mantiene la misma distancia desde la parte superior */
+  background-color: #fefefe;
+  border-radius: 50%;
+  border: 2px solid floralwhite;
 }
 
 /* MODO OSCURO */
