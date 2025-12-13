@@ -36,6 +36,31 @@
 
 
     <p hidden id="contador">0</p>
+    <p hidden id="ganar">0</p>
+
+    <div id="ganador" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close" onclick="closeGanador()">&times;</span>
+        <h2>Ganaste</h2>
+        <br>
+        <p>Picas y fijas consiste en adivinar un número de 4 dígitos, cuyas cifras sin del 0 al 9, no se repiten.
+  
+          Cada turno el jugador escoge cuál será la serie de números que le gustaría intentar.
+        </p>
+        <br>
+        <button class="botonv1 dos accion2"onclick="closeGanador()">Jugar otra vez</button>
+      </div>
+    </div>
+    <div id="perdedor" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close" onclick="closePerdedor()">&times;</span>
+        <h2>Perdiste</h2>
+        <br>
+        <p>Pero siempre se puede volver a intentar</p>
+        <br>
+        <button class="botonv1 dos accion2"onclick="closePerdedor()">Jugar otra vez</button>
+      </div>
+    </div>
 
     <div class="area"></div>
     <div class="tablero">
@@ -88,10 +113,13 @@
       <div class="espacioF" id="f7"></div>
     </div>
     <p class="label">Ingresar su intento:</p>
+
+    <div class="cuadro">
     <textarea class="dos" id="intento" maxlength="4"></textarea>
+    </div>
 
     <div class="buttons">
-      <button class="botonv1 dos accion2">Reiniciar</button>
+      <button class="botonv1 dos accion2" >Reiniciar</button>
       <button class="botonv2 dos segundo">Intentar</button>
     </div>
 

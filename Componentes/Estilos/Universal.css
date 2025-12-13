@@ -174,6 +174,12 @@ textarea {
   text-align: center;
 }
 
+.cuadro {
+
+align-items: center;
+
+}
+
 /* BOTONES */
 .buttons {
   display: flex;
@@ -189,6 +195,7 @@ button {
   cursor: pointer;
   margin: 0px 35px;
 }
+
 
 /* Estilo de botones principales */
 .botonv1 {
