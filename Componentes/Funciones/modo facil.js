@@ -111,7 +111,3 @@ function openModal() {
     document.getElementById("modal").style.display = "none";
   }
 
-function myFunction() {
-  document.body.classList.toggle("dark-mode");
-}
-

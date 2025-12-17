@@ -3,16 +3,22 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Rubik", sans-serif; /* Fuente principal */
+  font-family: "Rubik", sans-serif;
+  /* Fuente principal */
 }
 
 :root {
   /* Colores principales del diseño */
-  --color-uno: springgreen;   /* Color de fondo principal */
-  --color-dos: #212121;       /* Color de fondo oscuro */
-  --color-tres: #575ce5;      /* Color de fondo adicional */
-  --color-cuatro: #F7FF3C;    /* Color de fondo amarillo */
-  --color-texto: springgreen; /* Color del texto */
+  --color-uno: springgreen;
+  /* Color de fondo principal */
+  --color-dos: #212121;
+  /* Color de fondo oscuro */
+  --color-tres: #575ce5;
+  /* Color de fondo adicional */
+  --color-cuatro: #F7FF3C;
+  /* Color de fondo amarillo */
+  --color-texto: springgreen;
+  /* Color del texto */
 
   /* Tamaños y tipografía */
   --font-size: 16px;
@@ -29,139 +35,149 @@ body {
 }
 
 .body1 {
-  background: var(--color-uno); /* Fondo verde */
+  background: var(--color-uno);
+  /* Fondo verde */
 }
 
 .body2 {
-  background: var(--color-dos); /* Fondo oscuro */
+  background: var(--color-dos);
+  /* Fondo oscuro */
 }
 
 .body3 {
-  background: var(--color-tres); /* Fondo azul */
+  background: var(--color-tres);
+  /* Fondo azul */
 }
 
 .body4 {
-  background: var(--color-cuatro); /* Fondo amarillo */
+  background: var(--color-cuatro);
+  /* Fondo amarillo */
 }
 
 /* pagina de inicio*/
 
 
 .form {
-    --input-focus: #2d8cf0;
-    --font-color: #323232;
-    --font-color-sub: #666;
-    --bg-color: #fff;
-    --main-color: #323232;
-    padding: 20px;
-    background: lightgrey;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 20px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    box-shadow: 4px 4px var(--main-color);
-    margin: 5rem;
-  }
-  
-  .title {
-    color: var(--font-color);
-    font-weight: 900;
-    font-size: 20px;
-  }
-  
-  .title span {
-    color: var(--font-color-sub);
-    font-weight: 600;
-    font-size: 17px;
-  }
-  
-  .input, a {
-    width: 90%;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--font-color);
-    padding: 5px 10px;
-    outline: none;
-  }
-  
-  .input::placeholder {
-    color: var(--font-color-sub);
-    opacity: 0.8;
-  }
-  
-  .input:focus {
-    border: 2px solid var(--input-focus);
-  }
-  
-  .login-with {
-    display: flex;
-    gap: 20px;
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  padding: 20px;
+  background: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  margin: 5rem;
 }
-  
-  .button-log {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    color: var(--font-color);
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-    fill: var(--main-color);
-  }
-  
-  .button-log:hover, .button-confirm:hover {
-    box-shadow: 0px 0px var(--main-color);
-    transform: translate(3px, 3px);
-  }
-  
-  .button-confirm {
-    margin: 5px auto 0 auto;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--font-color);
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-  }
-  
+
+.title {
+  color: var(--font-color);
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.title span {
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.input,
+a {
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.login-with {
+  display: flex;
+  gap: 20px;
+}
+
+.button-log {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  color: var(--font-color);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--main-color);
+}
+
+.button-log:hover,
+.button-confirm:hover {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.button-confirm {
+  margin: 5px auto 0 auto;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
 
 /* CONTENEDOR PRINCIPAL */
 .container {
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #ffffff;
+  /* Fondo blanco */
   width: 90%;
   padding: 5%;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+  box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1);
+  /* Sombra del contenedor */
   border-radius: 10px;
-  perspective: 300px; /* Perspectiva 3D */
-  place-items: center; /* Centrado del contenido */
+  perspective: 300px;
+  /* Perspectiva 3D */
+  place-items: center;
+  /* Centrado del contenido */
 }
 
 /* TIPOGRAFÍA Y ENLACES */
@@ -178,7 +194,9 @@ textarea {
 }
 
 /* TÍTULOS */
-.titulo1, .titulo2, .titulo3 {
+.titulo1,
+.titulo2,
+.titulo3 {
   color: #ffffff;
   border-radius: 5px;
   border: 5px solid;
@@ -186,30 +204,39 @@ textarea {
 }
 
 .titulo1 {
-  background-color: var(--color-uno); /* Fondo verde */
-  border-color: var(--color-uno); /* Borde verde */
+  background-color: var(--color-uno);
+  /* Fondo verde */
+  border-color: var(--color-uno);
+  /* Borde verde */
 }
 
 .titulo2 {
-  background-color: var(--color-dos); /* Fondo oscuro */
-  border-color: var(--color-dos); /* Borde oscuro */
+  background-color: var(--color-dos);
+  /* Fondo oscuro */
+  border-color: var(--color-dos);
+  /* Borde oscuro */
 }
 
 .titulo3 {
-  background-color: var(--color-tres); /* Fondo azul */
-  border-color: var(--color-tres); /* Borde azul */
+  background-color: var(--color-tres);
+  /* Fondo azul */
+  border-color: var(--color-tres);
+  /* Borde azul */
 }
 
 /* ÁREA DE ELEMENTOS CENTRADOS */
 .area {
-  place-items: center; /* Centrado del contenido dentro de un contenedor */
+  place-items: center;
+  /* Centrado del contenido dentro de un contenedor */
 }
 
 /* ESTILOS PARA EL TABLERO (Juego) */
 .tablero {
   display: grid;
-  grid-template-columns: repeat(7, 30px); /* 7 columnas */
-  grid-template-rows: repeat(6, 30px); /* 6 filas */
+  grid-template-columns: repeat(7, 30px);
+  /* 7 columnas */
+  grid-template-rows: repeat(6, 30px);
+  /* 6 filas */
   gap: 5px;
   padding: 5px;
   top: 50%;
@@ -218,8 +245,20 @@ textarea {
 
 .tablero1 {
   display: grid;
-  grid-template-columns: repeat(4, 30px); /* 4 columnas */
-  grid-template-rows: repeat(6, 30px); /* 6 filas */
+  grid-template-columns: repeat(4, 30px);
+  /* 4 columnas */
+  grid-template-rows: repeat(6, 30px);
+  /* 6 filas */
+  gap: 5px;
+  padding: 5px;
+  top: 50%;
+  left: 50%;
+}
+
+.tablero2 {
+  display: grid;
+  grid-template-columns: repeat(4, 30px);
+  /* 4 columnas */
   gap: 5px;
   padding: 5px;
   top: 50%;
@@ -227,7 +266,9 @@ textarea {
 }
 
 /* ESTILOS DE LAS CASILLAS DEL TABLERO */
-.espacio, .espacioP, .espacioF {
+.espacio,
+.espacioP,
+.espacioF {
   width: 30px;
   height: 30px;
   border-radius: 5px;
@@ -241,22 +282,28 @@ textarea {
 
 /* Casillas de los intentos */
 .espacioF {
-  background-color: var(--color-uno); /* Fondo verde */
-  border: 2px solid var(--color-dos); /* Borde oscuro */
+  background-color: var(--color-uno);
+  /* Fondo verde */
+  border: 2px solid var(--color-dos);
+  /* Borde oscuro */
 }
 
 .espacioP {
-  background-color: var(--color-cuatro); /* Fondo amarillo */
-  border: 2px solid var(--color-dos); /* Borde oscuro */
+  background-color: var(--color-cuatro);
+  /* Fondo amarillo */
+  border: 2px solid var(--color-dos);
+  /* Borde oscuro */
 }
 
 /* Variaciones de estilo para cada tipo de espacio */
 .uno {
-  border: 2px solid var(--color-tres); /* Borde azul */
+  border: 2px solid var(--color-tres);
+  /* Borde azul */
 }
 
 .dos {
-  border: 2px solid var(--color-dos); /* Borde oscuro */
+  border: 2px solid var(--color-dos);
+  /* Borde oscuro */
 }
 
 #separador {
@@ -283,7 +330,7 @@ textarea {
 
 .cuadro {
 
-align-items: center;
+  align-items: center;
 
 }
 
@@ -306,13 +353,17 @@ button {
 
 /* Estilo de botones principales */
 .botonv1 {
-  background-color: var(--color-uno); /* Fondo verde */
-  color: #ffffff; /* Texto blanco */
+  background-color: var(--color-uno);
+  /* Fondo verde */
+  color: #ffffff;
+  /* Texto blanco */
 }
 
 .botonv2 {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #424ae0; /* Texto azul */
+  background-color: #ffffff;
+  /* Fondo blanco */
+  color: #424ae0;
+  /* Texto azul */
 }
 
 .botonv3 {
@@ -321,55 +372,66 @@ button {
 
 /* Estilos para botones con acción */
 .accion {
-  background-color: var(--color-tres); /* Fondo azul */
+  background-color: var(--color-tres);
+  /* Fondo azul */
   color: #ffffff;
 }
 
 .accion2 {
-  background-color: var(--color-dos); /* Fondo oscuro */
+  background-color: var(--color-dos);
+  /* Fondo oscuro */
   color: #ffffff;
 }
 
 /* Botón con texto secundario */
 .segundo {
-  color: var(--color-dos); /* Texto oscuro */
+  color: var(--color-dos);
+  /* Texto oscuro */
 }
 
-/* ESTILOS PARA EL MODAL (Ventana emergente) */
+/* =========================================================
+   ESTILOS ACTUALIZADOS PARA EL MODAL (Ventana emergente)
+   ========================================================= */
 .modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
-  border-radius: 10px;
+    position: fixed;
+    z-index: 9999; /* Aumentado para asegurar que aparezca sobre todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll si el contenido es grande */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
+    /* Aquí no es necesario border-radius */
 }
 
 .modal-content {
-  background-color: #fefefe; /* Fondo blanco */
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  border-radius: 15px;
-  width: 80%;
+    background-color: #fefefe;
+    /* 15% arriba, centrado horizontalmente */
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px; /* Ancho máximo para mejor diseño */
+    text-align: center; /* Centra el contenido del modal */
 }
 
-/* Estilo del botón de cierre */
+/* Estilo del botón de cierre (ya existía en tu código) */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
+/* El resto de tus estilos CSS (incluyendo .close) son correctos. */
+
 
 /* Estilos para la imagen (luna) */
 img {
@@ -379,12 +441,15 @@ img {
   right: 50px;
   top: 50px;
 }
-.ri-arrow-go-back-line {  
+
+.ri-arrow-go-back-line {
   width: 20px;
   height: 20px;
   position: fixed;
-  left: 50px; /* Ajusta la distancia desde la izquierda */
-  top: 50px; /* Mantiene la misma distancia desde la parte superior */
+  left: 50px;
+  /* Ajusta la distancia desde la izquierda */
+  top: 50px;
+  /* Mantiene la misma distancia desde la parte superior */
   background-color: #fefefe;
   border-radius: 50%;
   border: 2px solid floralwhite;
@@ -404,14 +469,68 @@ img {
   color: var(--first-color);
 }
 
-i:hover, .lunita:hover {
+i:hover,
+.lunita:hover {
   cursor: pointer;
 }
 
 body.dark-mode {
-  background-color: #252525; /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
+  background-color: #252525;
+  /* Fondo oscuro */
+  color: #fff;
+  /* Texto blanco */
   --title-color: hsl(17, 12%, 95%);
   --text-color: hsl(17, 12%, 75%);
   --container-color: hsl(17, 24%, 12%);
+}
+
+/* Definimos la variable de color en el nivel raíz o en el selector del corazón */
+.pixel-heart {
+  /* ¡Aquí es donde defines el color ÚNICO! */
+  --heart-color: red;
+  --lost-color: gray;
+  /* Color para corazones perdidos */
+
+  /* Define el tamaño de un solo 'píxel' (5px) */
+  width: 5px;
+  height: 5px;
+
+  /* Usa la variable para el píxel central */
+  background-color: var(--heart-color);
+  position: relative;
+
+  /* Los valores de box-shadow ahora solo usan la variable */
+  box-shadow:
+    /* Fila 1 */
+    -10px -10px 0 var(--heart-color), -5px -10px 0 var(--heart-color), 5px -10px 0 var(--heart-color), 10px -10px 0 var(--heart-color),
+
+    /* Fila 2 */
+    -15px -5px 0 var(--heart-color), -10px -5px 0 var(--heart-color), -5px -5px 0 var(--heart-color), 0 -5px 0 var(--heart-color), 5px -5px 0 var(--heart-color), 10px -5px 0 var(--heart-color), 15px -5px 0 var(--heart-color),
+
+    /* Fila 3 */
+    -15px 0 0 var(--heart-color), -10px 0 0 var(--heart-color), -5px 0 0 var(--heart-color), 5px 0 0 var(--heart-color), 10px 0 0 var(--heart-color), 15px 0 0 var(--heart-color),
+
+    /* Fila 4 */
+    -10px 5px 0 var(--heart-color), -5px 5px 0 var(--heart-color), 0 5px 0 var(--heart-color), 5px 5px 0 var(--heart-color), 10px 5px 0 var(--heart-color),
+
+    /* Fila 5 */
+    -5px 10px 0 var(--heart-color), 0 10px 0 var(--heart-color), 5px 10px 0 var(--heart-color),
+
+    /* Fila 6 */
+    0 15px 0 var(--heart-color);
+}
+
+.lost {
+  /* Sobrescribe la variable para que todas las sombras también cambien a gris */
+  --heart-color: var(--lost-color) !important;
+}
+
+.marcador {
+  display: grid;
+  grid-template-columns: repeat(5, 30px);
+  /* 4 columnas */
+  gap: 10px;
+  padding: 10%;
+  top: 50%;
+  left: 50%;
 }
