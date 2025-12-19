@@ -5,44 +5,43 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Picas y fijas</title>
+  <meta name="description" content="Pagina de juegos minimalista">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Nicolas Velasquez Isaza">
+  <meta property="og:image" content="https://www.infobae.com/resizer/v2/XGBU7CJKQNHVFNQAXBWCWSD4LY.jpg?auth=16cbd4ec8200bd6af917f8ade37b028a858374918778d8c4a2537dade878b733&smart=true&width=350&height=197&quality=85"/>
+  <meta property="og:title" content="Jugosos, juegos para perezosos" />
+  <meta property="og:description" content="Diviértete con juegos minimalistas diseñados para quienes no quieren complicarse. ¡Juega ahora!" />
+  <title>Jugosos</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/universal.css" />
 </head>
 
 <body class="body2">
-  <a href="../index.html"><i class="ri-arrow-go-back-line"></i></a>
 
-  <div class="container">
-    <div class="titulo1">
-      <p>PICAS Y FIJAS</p>
-    </div>
+<div class="form">
+        <div class="title">Picas y fijas,<br><span>Adivina la combinación de 4 numeros.</span></div>
 
-
-    <div class="buttons">
-      <a href="facil.html"><button class="botonv1">Facil</button></a>
-      <a href="clasico.html"><button class="botonv1">Dificil</button></a>
-       <a href="quick.html"><button class="botonv1">Rapido</button></a>
-    </div>    
-    <button class="botonv3" onclick="openModal()">¿Cómo jugar?</button>
-
-    <div id="modal" class="modal" style="display: none;">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Instrucciones</h2>
-        <br>
-        <p>Picas y fijas consiste en adivinar un número de 4 dígitos, cuyas cifras sin del 0 al 9, no se repiten.</p>
-        <br>
-        <p> Cada turno el jugador escoge cuál será la serie de números que le gustaría intentar
-        </p>
+        <a href="dificulatades.html" class="button-confirm" >Jugar</a> 
 
       </div>
-    </div>
+      
+      <div class="form">
+        <div class="title">Wordle,<br><span>Adivina la palabra.</span></div>
 
-  </div>
-  <script src="/assets/js/modo-facil.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+        <a href="dificulatades.html" class="button-confirm" >Jugar</a> 
+
+      </div>
+
+      <div class="form">
+        <div class="title">Sudoku,<br><span>Desafia tu mente.</span></div>
+
+        <a href="sudoku.html" class="button-confirm" >Jugar</a> 
+
+      </div>
+      
+      
+
 </body>
 
 </html>

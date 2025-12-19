@@ -271,6 +271,29 @@ textarea {
   left: 50%;
 }
 
+.tablero3 {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    width: 450px; /* O el tamaño que prefieras */
+    border: 2px solid #333;
+}
+
+.espacioS {
+    border: 0.5px solid #ccc;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bordes para crear las cajas de 3x3 */
+.espacioS:nth-child(3n) { border-right: 2px solid #333; }
+.espacioS:nth-child(9n) { border-right: 0.5px solid #ccc; } /* Reset para el borde derecho del tablero */
+.espacioS:nth-child(n+19):nth-child(-n+27),
+.espacioS:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #333;
+}
+
 /* ESTILOS DE LAS CASILLAS DEL TABLERO */
 .espacio,
 .espacioP,
